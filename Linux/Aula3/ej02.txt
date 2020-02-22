@@ -1,0 +1,6 @@
+Redireccionar salida comando ls para archivo.txt:
+ls >> archivo.txt
+Redireccionar archivo.txt con el comando sort:
+sort < archivo.txt
+Redireccionar archivo.txt con el comando sort y la salida del comando a resultado.txt:
+sort < archivo.txt >> resultado.txt

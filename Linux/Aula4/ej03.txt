@@ -1,0 +1,80 @@
+1. ¿Cuál es el nombre de su máquina?
+
+rcuevas-virtual-machine
+
+2. ¿Cuál es la fecha y hora de su sistema?
+
+vie feb 14 07:52:43 -04 2020
+
+3. ¿En qué ruta se encuentra el comando cp?
+
+/bin/cp
+
+4. Intente adaptar los 10 comandos del uso de comando find para localizar archivos en su home
+
+- Listar todos los archivos en su directorio
+	find /home
+- Especificar la búsqueda y limitarla solo algunos subdirectorios: maxdepth limita los niveles en la búsqueda
+	find /home -maxdepth 2
+- Combinar múltiples criterios de búsqueda: Se consigue con el símbolo ! si se quiere negar y contínuo si se desea ambos
+	find /home -maxdepth 3 -name "*.txt"
+- Encontrar solamente archivos o solamente directorios
+	Solamente archivos
+		find /home -type f
+	Solamente directorios
+		find /home -type d
+- Localizar archivos ocultos
+	find ~ -type f -name ".*"
+- Encontrar archivos con determinados permisos
+	find /home -perm 0744
+- Encontrar archivos en base a sus propietarios
+	find /home -user rcuevas
+- Localizar archivos pertenecientes a un grupo
+	find /home -group rcuevas
+- Buscar archivos y directorios en base a periodos de modificación
+	Modificado
+		find /home -ntime 5
+	Accedido
+		find /home -atime 5
+	Entre X y Y días
+		find /home -mtime +10 -mtime-20
+- Localizar archivos en base al tamaño
+	find /home -size 40M
+
+5. Ve a /home/curso e intente localizar todos los archivos con extension .txt en todos los subdirectorios usando el comando find
+
+find . -name *.txt
+
+./curso1302/ej01.txt
+./curso1302/ej03.txt
+./curso1302/ej02.txt
+./curso1102/RobertoCuevas/aula2/ejercicios/ej01.txt
+./curso1102/RobertoCuevas/aula2/ejercicios/ej03.txt
+./curso1102/RobertoCuevas/aula2/ejercicios/ej02.txt
+./Repositorio/curso1302/ej01.txt
+./Repositorio/curso1302/ej02.txt
+./Repositorio/curso1102/RobertoCuevas/aula2/ejercicios/ej01.txt
+./Repositorio/curso1102/RobertoCuevas/aula2/ejercicios/ej03.txt
+./Repositorio/curso1102/RobertoCuevas/aula2/ejercicios/ej02.txt
+./Repositorio/curso1202/CopiaBio.txt
+./Repositorio/curso1202/ej01.txt
+./Repositorio/curso1202/nombres.txt
+./Repositorio/curso1202/tres_primeros.txt
+./Repositorio/curso1202/ej02.txt
+./Repositorio/curso1002/RobertoCuevas/aula1/bio.txt
+./Repositorio/curso1002/RobertoCuevas/aula1/notas.txt
+./Repositorio/curso1002/backup/aula1/bio.txt
+./Repositorio/curso1002/backup/aula1/notas.txt
+./curso1202/CopiaBio.txt
+./curso1202/ej01.txt
+./curso1202/nombres.txt
+./curso1202/tres_primeros.txt
+./curso1202/ej02.txt
+./curso1002/RobertoCuevas/aula1/bio.txt
+./curso1002/RobertoCuevas/aula1/notas.txt
+./curso1002/backup/aula1/bio.txt
+./curso1002/backup/aula1/notas.txt
+
+6. Intente usar el comando find con la opcion exec para borrar los archivos con extensión .so
+
+find ./curso1102 -name "*.so" -exec rm {} \;

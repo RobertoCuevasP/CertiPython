@@ -1,0 +1,10 @@
+En la clase de hoy se vio:
+- ls : ver a los diferentes archivos o directorios, según su extensión se ve más información
+- cd : cambia de directorio
+- mkdir : crea un directorio 
+- rmdir : borra un directorio
+- touch : crea un archivo
+- rm : borra el archivo
+- cp : copia un archivo a otra direccion
+- mv : renombrar o mueve el archivo
+

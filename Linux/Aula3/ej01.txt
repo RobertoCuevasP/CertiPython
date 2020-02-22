@@ -1,0 +1,42 @@
+cat nombres.txt | sort
+	Alejandro
+	Alejandro
+	Andres
+	Cesar	
+	Fernanda
+	Luciana
+	Mauricio
+	Mauricio
+	Raisa
+	Roberto	
+cat nombres.txt | sort| uniq
+	Alejandro
+	Andres
+	Cesar
+	Fernanda
+	Luciana
+	Mauricio
+	Raisa
+	Roberto
+cat nombres.txt | sort| uniq -c
+      2 Alejandro
+      1 Andres
+      1 Cesar
+      1 Fernanda
+      1 Luciana
+      2 Mauricio
+      1 Raisa
+      1 Roberto
+cat nombres.txt | sort| head -n 3
+	Alejandro
+	Alejandro
+	Andres
+cat nombres.txt | sort| tail -n 3
+	Mauricio
+	Raisa
+	Roberto
+
+Ejercicio2: Defenir un alias para editar un archivo:
+
+alias edicion='vim /home/rcuevas/Certi_Python/curso1202/nombres.txt'
+

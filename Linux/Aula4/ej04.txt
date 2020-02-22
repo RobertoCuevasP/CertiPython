@@ -1,0 +1,35 @@
+1. ¿Cuántas palabras, caracteres y líneas tiene el archivo nombres.txt?
+141 lineas
+284 palabras
+2316 caracteres
+2. Use grep para obtener solo nombres que comiencen con la letra A
+Nombres que comienzan con A:
+	grep "^A" nombres.txt
+Nombres que contengan a en cualquier posición de la línea:
+	grep "a" nombres.txt
+3. Use grep para obtener solo nombres que no comiencen por A. Coloque el resultado en nombres_no_a.txt
+	grep -v "^A" nombres.txt >> nombres_no_a.txt
+4. Use el comando diff para comparar nombres.txt con nombres_no_a.txt
+	diff nombres.txt nombres_no_a.txt
+5. El archivo /share/pesquisa.txt contiene resultados brutos de los votos de una elección con varios candidatos. Cópialo en tu área. Use una combinación de sort, uniq y WC para diga cuántos candidatos diferentes fueron votados.
+	cat nombres.txt | sort | uniq | wc
+12 candidatos diferentes fueron votados, realmente son 10 candidatos. Lo que ocurre es que diferencia dos nombres que son idénticos en 2 ocasiones. Cuya diferencia se da por un espacio.
+
+6.Dibuje una línea de comando para imprimir en la pantalla el nombre de cada candidato y su
+número de votos en orden descendente de número de votos
+
+	cat nombres.txt | sort | unic -c | sort -n -r
+     25 Lucie Delaughter
+     18 Bennett Lanza
+     14 Sherrie Melrose
+     14 Shalonda Blakey
+     14 Johna Stoddart
+     14 Gavin Kelleher
+     13 Jolene Graydon
+     12 Homer Whatley
+     12 Awilda Lazaro
+      4 Leonel Zambrano
+      1 Lucie Delaughter
+      1 ﻿Jolene Graydon 
+
+

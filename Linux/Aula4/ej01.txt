@@ -1,0 +1,27 @@
+Use el comando ps para saber:
+1. Que procesos del usuario está ejecutando:
+	ps -e
+2. Los procesos que todos los usuarios están ejecutando:
+	ps -U root
+	ps -e
+Cabe recalcar que no puede ver los procesos de todos los usuarios al mismo tiempo, sino uno por uno, lo más cercano sería ver los procesos que comparten, o ver los procesos del superusuario root.
+3. Abra Firefox y encuentre su PID:
+	firefox &
+	PID: 3077
+4. Mate Firefox con el comando kill
+	kill 3077
+5. Abra gedit por línea de comando y coloquelo en background con Control+Z bg <enter>
+	gedit
+	Control +Z
+	bg
+		[2]+ gedit &
+6. Traiga de nuevo gedit hacia foreground con fg
+	fg 2
+7. Use top para determinar que procesos están consumiendo más recursos
+	Se utilizó el comando top para ver los procesos en directo, estando allí se usó M para ordenarlos por el tamaño de recursos utilizados de forma descendente
+8. Use man top para entender que es el listado
+El comando top proporciona una vista en tiempo real de un sistema en ejecución. Esta información es listada por proceso que es manejado por el kernel de Linux.
+9. Mate algun proceso no importante con top y la tecla k
+Se inició el proceso en paralelo gedit con el PID [3476]. Posteriormente se ingresó a top, y allí con el comando k junto al PID se logró matar el proceso.
+
+

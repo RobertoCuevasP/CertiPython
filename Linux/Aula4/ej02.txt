@@ -1,0 +1,9 @@
+- Se ejecutó el script con el comando ./forever.sh
+- Se colocó el script en background con Control+Z
+- Se buscó proceso con el comando ps, el cual fue 2553
+- Se mató el proceso con el comando kill 2553
+
+- Se ejecutó nuevamente el script en background con el comando nohup ./forever.sh >> ej02.txt 2> salida.err. Posteriormente se cerró la terminal, una vez se volvió a abrir el proceso continuó de manera oculta.
+
+Starting the Infinite Process
+Inside the loop that will go forever
